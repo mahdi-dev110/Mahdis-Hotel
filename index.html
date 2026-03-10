@@ -1,0 +1,3135 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mahdi's Hotel — Luxury hotel with world-class amenities. Book your stay online.">
+  <meta name="theme-color" content="#B8860B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  
+  <meta property="og:title" content="Mahdi's Hotel">
+  <meta property="og:description" content="Luxury hotel experience where elegance meets comfort">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahdishotel.com">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mahdi's Hotel">
+  <meta name="twitter:description" content="Luxury hotel experience where elegance meets comfort">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80">
+
+  
+  <link rel="manifest"
+    href="data:application/json;base64,eyJuYW1lIjogIk1haGRpJ3MgSG90ZWwiLCAic2hvcnRfbmFtZSI6ICJNSEQiLCAidGhlbWVfY29sb3IiOiAiI0I4ODYwQiIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwRDBEMEQiLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgInN0YXJ0X3VybCI6ICIvIn0=">
+
+  
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%230D0D0D'/%3E%3Ctext x='50' y='68' font-family='serif' font-size='55' font-weight='bold' text-anchor='middle' fill='%23B8860B'%3EM%3C/text%3E%3C/svg%3E">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <title>Mahdi's Hotel | Luxury Accommodation</title>
+
+  <style>
+    
+    :root {
+      --color-primary: #B8860B;
+      --color-primary-light: #DAA520;
+      --color-bg: #0D0D0D;
+      --color-surface: #1A1A1A;
+      --color-surface-light: #2A2A2A;
+      --color-text: #F5F0E8;
+      --color-text-muted: #CCCCCC;
+      --color-accent: #C9A84C;
+      --color-muted: #888888;
+      --color-error: #E74C3C;
+      --color-success: #27AE60;
+
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --transition-fast: 0.2s ease;
+      --transition-normal: 0.3s ease;
+      --transition-slow: 0.5s ease;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+      --shadow-gold: 0 0 30px rgba(184, 134, 11, 0.3);
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --container-max: 1400px;
+      --container-padding: 1.5rem;
+    }
+
+    
+    [data-theme="light"] {
+      --color-bg: #FAFAFA;
+      --color-surface: #FFFFFF;
+      --color-surface-light: #F5F5F5;
+      --color-text: #1A1A1A;
+      --color-text-muted: #555555;
+      --color-muted: #777777;
+    }
+
+    
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--color-bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-primary);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-primary-light);
+    }
+
+    
+    ::selection {
+      background: var(--color-primary);
+      color: var(--color-bg);
+    }
+
+    
+    .page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .page-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-spinner {
+      width: 60px;
+      height: 60px;
+      border: 3px solid var(--color-surface);
+      border-top-color: var(--color-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loader-text {
+      margin-top: 1.5rem;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      letter-spacing: 0.2em;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: var(--color-bg);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 10001;
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+      outline: 2px solid var(--color-text);
+      outline-offset: 2px;
+    }
+
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--color-text);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+    }
+
+    p {
+      color: var(--color-text-muted);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color var(--transition-normal);
+    }
+
+    a:hover {
+      color: var(--color-primary-light);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--color-text);
+      outline-offset: 2px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: var(--color-bg);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: var(--color-bg);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--color-muted);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all var(--transition-normal);
+      padding: 1rem 0;
+    }
+
+    .navbar.scrolled {
+      background: var(--color-bg);
+      box-shadow: var(--shadow-md);
+      padding: 0.75rem 0;
+    }
+
+    [data-theme="light"] .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-monogram {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-bg);
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .navbar-nav a {
+      color: var(--color-text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .navbar-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: width var(--transition-normal);
+    }
+
+    .navbar-nav a:hover::after,
+    .navbar-nav a:focus::after {
+      width: 100%;
+    }
+
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .theme-toggle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--color-muted);
+      background: transparent;
+      color: var(--color-text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .theme-toggle:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .theme-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hamburger:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--color-text);
+      transition: all var(--transition-normal);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 350px;
+      height: 100vh;
+      background: var(--color-surface);
+      z-index: 1001;
+      padding: 6rem 2rem 2rem;
+      transition: right var(--transition-normal);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-nav.active {
+      right: 0;
+    }
+
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mobile-nav a {
+      color: var(--color-text);
+      font-size: 1.25rem;
+      font-family: var(--font-heading);
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom,
+          rgba(13, 13, 13, 0.4) 0%,
+          rgba(13, 13, 13, 0.6) 50%,
+          rgba(13, 13, 13, 0.9) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      max-width: 900px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--color-primary-light);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .hero-title {
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-style: italic;
+      color: var(--color-text-muted);
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.7s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+    .booking-widget {
+      background: rgba(26, 26, 26, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.9s;
+      border: 1px solid rgba(184, 134, 11, 0.2);
+    }
+
+    [data-theme="light"] .booking-widget {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(184, 134, 11, 0.3);
+    }
+
+    .booking-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .booking-field label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+    }
+
+    .booking-field input,
+    .booking-field select {
+      padding: 0.875rem;
+      background: var(--color-surface-light);
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+
+    .booking-field input:focus,
+    .booking-field select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.2);
+    }
+
+    .booking-widget .btn {
+      align-self: flex-end;
+      height: calc(100% - 1.5rem);
+      min-height: 48px;
+    }
+
+    
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .room-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      border: 1px solid transparent;
+    }
+
+    .room-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: var(--shadow-gold);
+      border-color: var(--color-primary);
+    }
+
+    .room-image {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .room-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .room-card:hover .room-image img {
+      transform: scale(1.1);
+    }
+
+    .room-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--color-primary);
+      color: var(--color-bg);
+      padding: 0.375rem 0.875rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .room-content {
+      padding: 1.5rem;
+    }
+
+    .room-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .room-name {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .room-price {
+      text-align: right;
+    }
+
+    .room-price .price {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .room-price .per-night {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+
+    .room-features {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .room-features li {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .room-features li::before {
+      content: '✓';
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .amenity-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-normal);
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .amenity-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .amenity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-primary);
+    }
+
+    .amenity-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .amenity-name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .amenity-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 250px;
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-zoom {
+      width: 50px;
+      height: 50px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-bg);
+      font-size: 1.5rem;
+      transform: scale(0);
+      transition: transform var(--transition-normal);
+    }
+
+    .gallery-item:hover .gallery-zoom {
+      transform: scale(1);
+    }
+
+    
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      transform: scale(0.9);
+      transition: transform var(--transition-normal);
+    }
+
+    .lightbox.active .lightbox-img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid var(--color-text);
+      border-radius: 50%;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+
+    .lightbox-close:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-bg);
+    }
+
+    .lightbox-close:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 50%;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+
+    .lightbox-nav:hover {
+      background: var(--color-primary);
+    }
+
+    .lightbox-nav:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .lightbox-prev {
+      left: 2rem;
+    }
+
+    .lightbox-next {
+      right: 2rem;
+    }
+
+    
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+      padding: 1rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.9) translateY(20px);
+      transition: transform var(--transition-normal);
+      border: 1px solid rgba(184, 134, 11, 0.3);
+    }
+
+    .modal-overlay.active .modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-surface-light);
+    }
+
+    .modal-title {
+      font-size: 1.75rem;
+    }
+
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid var(--color-muted);
+      border-radius: 50%;
+      color: var(--color-text);
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+
+    .modal-close:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .modal-close:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .form-group label .required {
+      color: var(--color-primary);
+      margin-left: 0.25rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: var(--color-surface-light);
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: all var(--transition-normal);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.2);
+    }
+
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: var(--color-error);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .error-message {
+      color: var(--color-error);
+      font-size: 0.85rem;
+      margin-top: 0.375rem;
+      display: none;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
+
+    .form-success {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .form-success-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .form-success h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-success p {
+      margin-bottom: 1.5rem;
+    }
+
+    
+    .testimonials-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .testimonials-track {
+      display: flex;
+      transition: transform var(--transition-slow);
+    }
+
+    .testimonial {
+      flex: 0 0 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .testimonial-stars {
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: var(--color-text);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-primary);
+    }
+
+    .testimonial-info {
+      text-align: left;
+    }
+
+    .testimonial-name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .testimonial-country {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    .testimonials-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-surface-light);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+
+    .testimonial-dot.active {
+      background: var(--color-primary);
+      transform: scale(1.2);
+    }
+
+    .testimonial-dot:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    
+    .stats-section {
+      background: var(--color-surface);
+      padding: 4rem 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.5rem;
+    }
+
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .contact-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--color-surface);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .contact-text strong {
+      display: block;
+      color: var(--color-text);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-text span {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-surface-light);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .contact-form {
+      background: var(--color-surface);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    
+    .footer {
+      background: var(--color-surface);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid var(--color-surface-light);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand .logo-monogram {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+
+    .footer-brand .logo-text {
+      font-size: 1.25rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: var(--color-surface-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text);
+      font-size: 1rem;
+      transition: all var(--transition-normal);
+    }
+
+    .social-link:hover {
+      background: var(--color-primary);
+      color: var(--color-bg);
+      transform: translateY(-3px);
+    }
+
+    .social-link:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .footer-links h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      color: var(--color-text);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      transition: color var(--transition-normal);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-surface-light);
+    }
+
+    .footer-copyright {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    .back-to-top {
+      width: 45px;
+      height: 45px;
+      background: var(--color-primary);
+      border: none;
+      border-radius: 50%;
+      color: var(--color-bg);
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+
+    .back-to-top:hover {
+      background: var(--color-primary-light);
+      transform: translateY(-3px);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 2px solid var(--color-text);
+      outline-offset: 2px;
+    }
+
+    
+    .toast-container {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .toast {
+      background: var(--color-surface);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.5rem;
+      color: var(--color-text);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: var(--shadow-gold);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: all;
+      min-width: 280px;
+      max-width: 420px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .toast-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .toast-msg {
+      flex: 1;
+    }
+
+    
+    .currency-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .currency-bar label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .currency-select {
+      padding: 0.3rem 0.6rem;
+      background: var(--color-surface-light);
+      border: 1px solid var(--color-muted);
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .currency-select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    .price[data-usd] {
+      transition: opacity 0.3s ease;
+    }
+
+    
+    .offers-section {
+      background: linear-gradient(135deg, var(--color-surface) 0%, #1a1500 100%);
+      border-top: 1px solid rgba(184, 134, 11, 0.2);
+      border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+      padding: 4rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    [data-theme="light"] .offers-section {
+      background: linear-gradient(135deg, #fff9e6 0%, #fdf3d0 100%);
+    }
+
+    .offers-section::before {
+      content: 'OFFERS';
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-family: var(--font-heading);
+      font-size: 6rem;
+      font-weight: 700;
+      color: rgba(184, 134, 11, 0.06);
+      letter-spacing: 0.3em;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .offer-card {
+      background: var(--color-surface-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border: 1px solid rgba(184, 134, 11, 0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .offer-card:hover {
+      border-color: var(--color-primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .offer-badge {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-bg);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .offer-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .offer-saving {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .offer-expires {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      margin-top: 0.25rem;
+    }
+
+    .error-404 {
+      display: none;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-404.active {
+      display: flex;
+    }
+
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(8rem, 20vw, 15rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .error-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      color: var(--color-muted);
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    
+    @media (max-width: 1024px) {
+      .booking-widget {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: span 1;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --container-padding: 1rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .navbar-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .booking-widget {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-widget .btn {
+        height: auto;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .lightbox-nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .hero-content {
+        padding: 6rem 1rem 2rem;
+      }
+
+      .booking-widget {
+        padding: 1.5rem;
+      }
+
+      .room-content {
+        padding: 1rem;
+      }
+
+      .testimonial-text {
+        font-size: 1.1rem;
+      }
+    }
+
+    
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <p class="loader-text">MAHDI'S HOTEL</p>
+  </div>
+
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  
+  <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#rooms" class="mobile-nav-link">Rooms</a></li>
+      <li><a href="#amenities" class="mobile-nav-link">Amenities</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="navbar-logo">
+        <div class="logo-monogram">M·H</div>
+        <span class="logo-text">Mahdi's Hotel</span>
+      </a>
+
+      <nav class="navbar-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#offers">Offers</a>
+        </li>
+        <li>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="theme-icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <main id="main-content">
+
+    
+    <section class="hero" id="home">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-subtitle">Est. 2000 · New York</p>
+        <h1 class="hero-title gold-gradient-text">Mahdi's Hotel</h1>
+        <p class="hero-tagline">A quiet kind of extraordinary</p>
+
+        <div class="booking-widget">
+          <div class="booking-field">
+            <label for="checkin">Check-in Date</label>
+            <input type="date" id="checkin" min="">
+          </div>
+          <div class="booking-field">
+            <label for="checkout">Check-out Date</label>
+            <input type="date" id="checkout" min="">
+          </div>
+          <div class="booking-field">
+            <label for="guests">Guests</label>
+            <select id="guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="heroSearchBtn">
+            <span>Search</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-label">Luxury Rooms</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-number" data-target="50000">0</div>
+            <div class="stat-label">Happy Guests</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number" data-target="25">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Awards Won</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="offers-section" id="offers">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Current Offers</h2>
+          <p>A few deals worth knowing about before you book.</p>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+            <span class="offer-badge">Weekend Deal</span>
+            <h3 class="offer-title">Stay 2 Nights, Pay for 1</h3>
+            <p class="offer-desc">Friday and Saturday nights only. Applies to Standard and Deluxe rooms. Breakfast
+              included both mornings.</p>
+            <p class="offer-saving">Save up to $249</p>
+            <p class="offer-expires">Valid through end of month</p>
+          </div>
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="offer-badge">Early Bird</span>
+            <h3 class="offer-title">Book 30 Days Ahead</h3>
+            <p class="offer-desc">Reserve any room 30+ days in advance and get 20% off the nightly rate. No cancellation
+              fees within 48 hours of booking.</p>
+            <p class="offer-saving">20% off any room type</p>
+            <p class="offer-expires">Always running — no expiry</p>
+          </div>
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="offer-badge">Suite Special</span>
+            <h3 class="offer-title">Presidential Suite + Spa Day</h3>
+            <p class="offer-desc">Book the Presidential Suite for 2+ nights and get a complimentary spa session for two.
+              The butler books it for you.</p>
+            <p class="offer-saving">$300 spa credit included</p>
+            <p class="offer-expires">Weekdays only · Limited availability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our Rooms & Suites</h2>
+          <p>Three room types. All of them well-made. Pick what suits your trip — or just go for the suite if it's a
+            special occasion.</p>
+        </div>
+
+        <div class="currency-bar" data-aos="fade-up">
+          <label for="currencySelect">Show prices in:</label>
+          <select id="currencySelect" class="currency-select">
+            <option value="USD">USD ($)</option>
+            <option value="PKR">PKR (₨)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+
+        <div class="rooms-grid">
+          
+          <article class="room-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="room-image">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
+                alt="Standard Room with comfortable bed and modern decor" loading="lazy">
+              <span class="room-badge">Popular</span>
+            </div>
+            <div class="room-content">
+              <div class="room-header">
+                <div>
+                  <h3 class="room-name">Standard Room</h3>
+                  <p class="room-desc">Everything you need, nothing you don't</p>
+                </div>
+                <div class="room-price">
+                  <span class="price" data-usd="149">$149</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <ul class="room-features">
+                <li>Queen Bed</li>
+                <li>City View</li>
+                <li>Free WiFi</li>
+                <li>Breakfast</li>
+              </ul>
+              <button class="btn btn-primary book-now-btn" data-room="Standard Room">Book Now</button>
+            </div>
+          </article>
+
+          
+          <article class="room-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="room-image">
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+                alt="Deluxe Room with king bed and premium furnishings" loading="lazy">
+              <span class="room-badge">Best Value</span>
+            </div>
+            <div class="room-content">
+              <div class="room-header">
+                <div>
+                  <h3 class="room-name">Deluxe Room</h3>
+                  <p class="room-desc">A step up — and you'll notice the difference</p>
+                </div>
+                <div class="room-price">
+                  <span class="price" data-usd="249">$249</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <ul class="room-features">
+                <li>King Bed</li>
+                <li>Ocean View</li>
+                <li>Jacuzzi</li>
+                <li>Minibar</li>
+              </ul>
+              <button class="btn btn-primary book-now-btn" data-room="Deluxe Room">Book Now</button>
+            </div>
+          </article>
+
+          
+          <article class="room-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="room-image">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+                alt="Presidential Suite with luxurious living area and panoramic views" loading="lazy">
+              <span class="room-badge">Premium</span>
+            </div>
+            <div class="room-content">
+              <div class="room-header">
+                <div>
+                  <h3 class="room-name">Presidential Suite</h3>
+                  <p class="room-desc">Two bedrooms, a butler, and no reason to leave</p>
+                </div>
+                <div class="room-price">
+                  <span class="price" data-usd="599">$599</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <ul class="room-features">
+                <li>2 Bedrooms</li>
+                <li>Panoramic View</li>
+                <li>Private Butler</li>
+                <li>Spa Access</li>
+              </ul>
+              <button class="btn btn-primary book-now-btn" data-room="Presidential Suite">Book Now</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="amenities">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>World-Class Amenities</h2>
+          <p>Things you'll actually use. No fluff, no filler — just the amenities that make a stay feel complete.</p>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="0">
+            <span class="amenity-icon">🏊</span>
+            <h3 class="amenity-name">Infinity Pool</h3>
+            <p class="amenity-desc">Rooftop pool with stunning city views</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="amenity-icon">🍽️</span>
+            <h3 class="amenity-name">Fine Dining</h3>
+            <p class="amenity-desc">Award-winning restaurant & bar</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="amenity-icon">🧖</span>
+            <h3 class="amenity-name">Luxury Spa</h3>
+            <p class="amenity-desc">Full-service spa & wellness center</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+            <span class="amenity-icon">🏋️</span>
+            <h3 class="amenity-name">Fitness Center</h3>
+            <p class="amenity-desc">24/7 state-of-the-art gym</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="400">
+            <span class="amenity-icon">📶</span>
+            <h3 class="amenity-name">Free WiFi</h3>
+            <p class="amenity-desc">High-speed internet throughout</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="500">
+            <span class="amenity-icon">🚗</span>
+            <h3 class="amenity-name">Valet Parking</h3>
+            <p class="amenity-desc">Complimentary parking service</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="600">
+            <span class="amenity-icon">✈️</span>
+            <h3 class="amenity-name">Airport Shuttle</h3>
+            <p class="amenity-desc">Free transport to/from airport</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="700">
+            <span class="amenity-icon">🍳</span>
+            <h3 class="amenity-name">Gourmet Breakfast</h3>
+            <p class="amenity-desc">Daily complimentary breakfast</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our Gallery</h2>
+          <p>A few photos to show what you're working with. The rooms look better in person, honestly.</p>
+        </div>
+
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+          <figure class="gallery-item" data-index="0">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"
+              alt="Hotel lobby with grand chandelier and marble floors" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+          <figure class="gallery-item" data-index="1">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
+              alt="Elegant hotel restaurant with ambient lighting" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+          <figure class="gallery-item" data-index="2">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80"
+              alt="Luxury spa treatment room" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+          <figure class="gallery-item" data-index="3">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80"
+              alt="Rooftop infinity pool at sunset" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+          <figure class="gallery-item" data-index="4">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80"
+              alt="Hotel bar with sophisticated interior design" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+          <figure class="gallery-item" data-index="5">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+              alt="Modern fitness center with premium equipment" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">+</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+    </div>
+
+    
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Guest Reviews</h2>
+          <p>Real guests, real stays. We don't filter these — though we're glad they tend to be kind.</p>
+        </div>
+
+        <div class="testimonials-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonials-track" id="testimonialsTrack">
+            
+            <div class="testimonial">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Stayed for our anniversary. They remembered it without being asked — flowers
+                in the room, a card at dinner. Presidential Suite was worth every penny."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah Mitchell"
+                  class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <p class="testimonial-name">Sarah Mitchell</p>
+                  <p class="testimonial-country">United Kingdom</p>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="testimonial">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Travels for work constantly. This is the hotel I actually look forward to.
+                The spa booking was easy, the food was good, and nobody bothered me when I needed quiet."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="James Chen"
+                  class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <p class="testimonial-name">James Chen</p>
+                  <p class="testimonial-country">Singapore</p>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="testimonial">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"I've stayed in a lot of hotels. Some are fancier. None of them made me feel
+                as comfortable. There's a difference between luxury and warmth — this one has both."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+                  alt="Isabella Rodriguez" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <p class="testimonial-name">Isabella Rodriguez</p>
+                  <p class="testimonial-country">Spain</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-dots" id="testimonialsDots"></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Get In Touch</h2>
+          <p>Questions? Special requests? Just want to check something before booking? We're here.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h3>Contact Information</h3>
+            <ul class="contact-details">
+              <li>
+                <span class="contact-icon">📍</span>
+                <div class="contact-text">
+                  <strong>Address</strong>
+                  <span>123 Luxury Avenue, Downtown District<br>New York, NY 10001</span>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">📞</span>
+                <div class="contact-text">
+                  <strong>Phone</strong>
+                  <span>+1 (212) 555-0123</span>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <div class="contact-text">
+                  <strong>Email</strong>
+                  <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                      data-cfemail="fa889f899f888c9b8e93959489ba979b929e938992958e9f96d4999597">[email&#160;protected]</a></span>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">🕐</span>
+                <div class="contact-text">
+                  <strong>Hours</strong>
+                  <span>24/7 Front Desk & Concierge</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" title="Mahdi's Hotel Location"></iframe>
+            </div>
+          </div>
+
+          <div class="contact-form" data-aos="fade-left">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Your Name <span class="required">*</span></label>
+                <input type="text" id="contactName" name="name" required>
+                <span class="error-message">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="contactEmail" name="email" required>
+                <span class="error-message">Please enter a valid email</span>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Your Message <span class="required">*</span></label>
+                <textarea id="contactMessage" name="message" required></textarea>
+                <span class="error-message">Please enter your message</span>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-monogram">M·H</div>
+            <span class="logo-text">Mahdi's Hotel</span>
+          </div>
+          <p>We've been doing this since 2000. We've gotten pretty good at it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Spa & Wellness</a></li>
+            <li><a href="#">Fine Dining</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Mahdi's Hotel. All rights reserved.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  
+  <div class="toast-container" id="toastContainer"></div>
+
+  
+  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Book Your Stay</h2>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingName">Full Name <span class="required">*</span></label>
+              <input type="text" id="bookingName" name="name" required>
+              <span class="error-message">Please enter your full name</span>
+            </div>
+            <div class="form-group">
+              <label for="bookingEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="bookingEmail" name="email" required>
+              <span class="error-message">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingPhone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="bookingPhone" name="phone" required>
+              <span class="error-message">Please enter your phone number</span>
+            </div>
+            <div class="form-group">
+              <label for="bookingRoom">Room Type <span class="required">*</span></label>
+              <select id="bookingRoom" name="room" required>
+                <option value="">Select a room</option>
+                <option value="Standard Room">Standard Room - $149/night</option>
+                <option value="Deluxe Room">Deluxe Room - $249/night</option>
+                <option value="Presidential Suite">Presidential Suite - $599/night</option>
+              </select>
+              <span class="error-message">Please select a room type</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingCheckin">Check-in Date <span class="required">*</span></label>
+              <input type="date" id="bookingCheckin" name="checkin" required>
+              <span class="error-message">Please select check-in date</span>
+            </div>
+            <div class="form-group">
+              <label for="bookingCheckout">Check-out Date <span class="required">*</span></label>
+              <input type="date" id="bookingCheckout" name="checkout" required>
+              <span class="error-message">Please select check-out date</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingRequests">Special Requests</label>
+            <textarea id="bookingRequests" name="requests"
+              placeholder="Any special requirements or preferences..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+        </form>
+
+        <div class="form-success" id="bookingSuccess" style="display: none;">
+          <div class="form-success-icon">✓</div>
+          <h3>Booking Confirmed!</h3>
+          <p>Thank you for choosing Mahdi's Hotel. We've sent a confirmation email with your booking details. We look
+            forward to welcoming you!</p>
+          <button class="btn btn-secondary" id="closeSuccessBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="error-404" id="error404">
+    <span class="error-code">404</span>
+    <h2 class="error-title">Page Not Found</h2>
+    <p class="error-message">We apologize, but the page you're looking for seems to have wandered off. Let us help you
+      find your way back to luxury.</p>
+    <a href="#home" class="btn btn-primary">Return Home</a>
+  </section>
+
+  
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    
+    
+    
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('pageLoader').classList.add('hidden');
+      }, 1500);
+    });
+
+    
+    
+    
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+
+    
+    
+    
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    
+    
+    
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMobileNav() {
+      hamburger.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.classList.add('active');
+      mobileNavOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileNav() {
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('active');
+      mobileNavOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+
+    mobileNavOverlay.addEventListener('click', closeMobileNav);
+    mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileNav));
+
+    
+    
+    
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    function updateThemeIcon(theme) {
+      if (theme === 'light') {
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+      } else {
+        themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+        themeToggle.setAttribute('aria-label', 'Toggle light mode');
+      }
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    
+    
+    
+    const heroBg = document.getElementById('heroBg');
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+
+    
+    
+    
+    const checkinInput = document.getElementById('checkin');
+    const checkoutInput = document.getElementById('checkout');
+    const today = new Date().toISOString().split('T')[0];
+
+    checkinInput.min = today;
+    checkoutInput.min = today;
+
+    checkinInput.addEventListener('change', () => {
+      checkoutInput.min = checkinInput.value;
+      if (checkoutInput.value && checkoutInput.value <= checkinInput.value) {
+        const nextDay = new Date(checkinInput.value);
+        nextDay.setDate(nextDay.getDate() + 1);
+        checkoutInput.value = nextDay.toISOString().split('T')[0];
+      }
+    });
+
+    
+    
+    
+    const bookingModal = document.getElementById('bookingModal');
+    const modalClose = document.getElementById('modalClose');
+    const bookingForm = document.getElementById('bookingForm');
+    const bookingSuccess = document.getElementById('bookingSuccess');
+    const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+    const bookNowBtns = document.querySelectorAll('.book-now-btn');
+    const bookingRoomSelect = document.getElementById('bookingRoom');
+    const heroSearchBtn = document.getElementById('heroSearchBtn');
+
+    
+    const bookingCheckin = document.getElementById('bookingCheckin');
+    const bookingCheckout = document.getElementById('bookingCheckout');
+    bookingCheckin.min = today;
+    bookingCheckout.min = today;
+
+    bookingCheckin.addEventListener('change', () => {
+      bookingCheckout.min = bookingCheckin.value;
+    });
+
+    function openModal(roomType = '') {
+      bookingModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      if (roomType) {
+        bookingRoomSelect.value = roomType;
+      }
+
+      
+      setTimeout(() => {
+        document.getElementById('bookingName').focus();
+      }, 100);
+    }
+
+    function closeModal() {
+      bookingModal.classList.remove('active');
+      document.body.style.overflow = '';
+      bookingForm.reset();
+      bookingForm.style.display = 'block';
+      bookingSuccess.style.display = 'none';
+      clearErrors();
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+      document.querySelectorAll('.error-message').forEach(el => el.classList.remove('visible'));
+    }
+
+    bookNowBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const roomType = btn.getAttribute('data-room');
+        openModal(roomType);
+      });
+    });
+
+    heroSearchBtn.addEventListener('click', () => {
+      if (checkinInput.value && checkoutInput.value) {
+        bookingCheckin.value = checkinInput.value;
+        bookingCheckout.value = checkoutInput.value;
+      }
+      openModal();
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    closeSuccessBtn.addEventListener('click', closeModal);
+
+    
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        closeModal();
+      }
+    });
+
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && bookingModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    
+    function validateField(field) {
+      const value = field.value.trim();
+      const formGroup = field.closest('.form-group');
+      const errorMsg = formGroup.querySelector('.error-message');
+      let isValid = true;
+
+      if (field.type === 'email') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        isValid = emailRegex.test(value);
+      } else {
+        isValid = value !== '';
+      }
+
+      if (!isValid) {
+        field.classList.add('error');
+        errorMsg.classList.add('visible');
+      } else {
+        field.classList.remove('error');
+        errorMsg.classList.remove('visible');
+      }
+
+      return isValid;
+    }
+
+    bookingForm.querySelectorAll('input[required], select[required]').forEach(field => {
+      field.addEventListener('blur', () => validateField(field));
+      field.addEventListener('input', () => {
+        if (field.classList.contains('error')) {
+          validateField(field);
+        }
+      });
+    });
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearErrors();
+
+      let isValid = true;
+      bookingForm.querySelectorAll('[required]').forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+
+      
+      if (bookingCheckin.value && bookingCheckout.value) {
+        if (new Date(bookingCheckout.value) <= new Date(bookingCheckin.value)) {
+          bookingCheckout.classList.add('error');
+          bookingCheckout.nextElementSibling.textContent = 'Check-out must be after check-in';
+          bookingCheckout.nextElementSibling.classList.add('visible');
+          isValid = false;
+        }
+      }
+
+      if (isValid) {
+        bookingForm.style.display = 'none';
+        bookingSuccess.style.display = 'block';
+      }
+    });
+
+    
+    
+    
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    const galleryImages = [
+      { src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=90', alt: 'Hotel lobby with grand chandelier and marble floors' },
+      { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&q=90', alt: 'Elegant hotel restaurant with ambient lighting' },
+      { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=90', alt: 'Luxury spa treatment room' },
+      { src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=90', alt: 'Rooftop infinity pool at sunset' },
+      { src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=90', alt: 'Hotel bar with sophisticated interior design' },
+      { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=90', alt: 'Modern fitness center with premium equipment' }
+    ];
+
+    let currentImageIndex = 0;
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      lightboxImg.src = galleryImages[index].src;
+      lightboxImg.alt = galleryImages[index].alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentImageIndex].src;
+      lightboxImg.alt = galleryImages[currentImageIndex].alt;
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentImageIndex].src;
+      lightboxImg.alt = galleryImages[currentImageIndex].alt;
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxNext.addEventListener('click', nextImage);
+    lightboxPrev.addEventListener('click', prevImage);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    });
+
+    
+    
+    
+    const testimonialsTrack = document.getElementById('testimonialsTrack');
+    const testimonialsDots = document.getElementById('testimonialsDots');
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+    let testimonialInterval;
+
+    
+    testimonials.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('testimonial-dot');
+      dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToTestimonial(index));
+      testimonialsDots.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.testimonial-dot');
+
+    function goToTestimonial(index) {
+      currentTestimonial = index;
+      testimonialsTrack.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextTestimonial() {
+      goToTestimonial((currentTestimonial + 1) % testimonials.length);
+    }
+
+    function startCarousel() {
+      testimonialInterval = setInterval(nextTestimonial, 4000);
+    }
+
+    function stopCarousel() {
+      clearInterval(testimonialInterval);
+    }
+
+    startCarousel();
+
+    
+    testimonialsTrack.addEventListener('mouseenter', stopCarousel);
+    testimonialsTrack.addEventListener('mouseleave', startCarousel);
+
+    
+    
+    
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let statsAnimated = false;
+
+    function animateStats() {
+      statNumbers.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            stat.textContent = Math.floor(current).toLocaleString() + '+';
+            requestAnimationFrame(updateCounter);
+          } else {
+            stat.textContent = target.toLocaleString() + '+';
+          }
+        };
+
+        updateCounter();
+      });
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          animateStats();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelector('.stats-section')?.classList &&
+      statsObserver.observe(document.querySelector('.stats-section'));
+
+    
+    
+    
+    const amenityCards = document.querySelectorAll('.amenity-card');
+
+    const amenityObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    amenityCards.forEach(card => amenityObserver.observe(card));
+
+    
+    
+    
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (name && email && message) {
+        showToast('✉️', `Got it, ${name}. We'll be in touch shortly.`);
+        contactForm.reset();
+      }
+    });
+
+    
+    
+    
+    const backToTop = document.getElementById('backToTop');
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    
+    
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    
+    
+    
+    bookingModal.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = bookingModal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          lastFocusable.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          firstFocusable.focus();
+          e.preventDefault();
+        }
+      }
+    });
+
+    
+    
+    
+    
+    
+    
+    const toastContainer = document.getElementById('toastContainer');
+
+    function showToast(icon, message, duration = 4000) {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `<span class="toast-icon">${icon}</span><span class="toast-msg">${message}</span>`;
+      toastContainer.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => toast.classList.add('show'));
+      });
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+      }, duration);
+    }
+    const rates = { USD: 1, PKR: 278.5, GBP: 0.79, EUR: 0.92 };
+    const symbols = { USD: '$', PKR: '₨', GBP: '£', EUR: '€' };
+    const currencySelect = document.getElementById('currencySelect');
+
+    function updatePrices(currency) {
+      const rate = rates[currency];
+      const symbol = symbols[currency];
+      document.querySelectorAll('.price[data-usd]').forEach(el => {
+        const usd = parseFloat(el.getAttribute('data-usd'));
+        const converted = Math.round(usd * rate);
+        el.textContent = symbol + converted.toLocaleString();
+      });
+      
+      document.querySelectorAll('#bookingRoom option[value]').forEach(option => {
+        if (!option.value) return;
+        const match = option.value.match(/Standard Room|Deluxe Room|Presidential Suite/);
+        if (!match) return;
+        const usdMap = { 'Standard Room': 149, 'Deluxe Room': 249, 'Presidential Suite': 599 };
+        const usd = usdMap[option.value];
+        if (usd) option.textContent = `${option.value} — ${symbol}${Math.round(usd * rate).toLocaleString()}/night`;
+      });
+    }
+
+    currencySelect.addEventListener('change', () => {
+      updatePrices(currencySelect.value);
+      showToast('💱', `Prices updated to ${currencySelect.value}`);
+    });
+
+  </script>
+</body>
+
+</html>
